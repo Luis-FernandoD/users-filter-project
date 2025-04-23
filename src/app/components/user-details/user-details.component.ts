@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { IUser } from '../../interfaces/user/user.interface';
 @Component({
   selector: 'app-user-details',
   standalone: false,
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './user-details.component.scss'
 })
 export class UserDetailsComponent {
-
+ @Input ({ required: true }) user: IUser = { } as IUser;
 }
