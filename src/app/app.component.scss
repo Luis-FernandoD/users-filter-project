@@ -1,6 +1,6 @@
 .custom-container{
     display: flex;
-    height: 100vh;
+    height: 100vh;    
 }
 
 .left-container{
@@ -8,17 +8,17 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(31, 31, 31);
 }
 
 .top-div{
     flex-grow: 1;
-    background-color: rgb(8, 8, 8);
+    margin: 10px solid;
 }
 
 .main-left-div{
     height: 80%;
     background-color: rgb(98, 99, 99);
+    margin: 10px solid;
 }
 
 .right-div{
