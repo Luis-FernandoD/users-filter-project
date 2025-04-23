@@ -12,6 +12,6 @@ export class UsersListComponent {
   usersList: IUser[] = UsersList;
 
   onUserSelected(user: IUser) {
-    
+    console.log(user)
   }
 }
