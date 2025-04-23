@@ -1,28 +1,30 @@
-export const UserList = [
-    {
-        "nome": "João Silva",
-        "email": "joao.silva@example.com",
-        "senha": "senha-segura-123",
-        "idade": 30,
-        "endereco": {
-          "rua": "Rua das Flores",
-          "numero": 42,
-          "cidade": "São Paulo",
-          "estado": "SP",
-          "pais": "Brasil"
-        },
-        "telefone": "11912345678",
-        "ativo": true,
-        "funcao": "Desenvolvedor",
-        "dataCadastro": "2023-08-01T09:00:00.000Z",
-        "status": {
-          "online": true,
-          "verificado": true,
-          "assinaturaAtiva": true,
-          "ultimoAcesso": "2023-08-02T09:00:00.000Z"
-        }
-      },     
-    {
+import { IUser } from '../interfaces/user/user.interface';
+
+export const UserList: IUser[] = [
+  {
+    nome: 'João Silva',
+    email: 'joao.silva@example.com',
+    senha: 'senha-segura-123',
+    idade: 30,
+    endereco: {
+      rua: 'Rua das Flores',
+      numero: 42,
+      cidade: 'São Paulo',
+      estado: 'SP',
+      pais: 'Brasil',
+    },
+    telefone: '11912345678',
+    ativo: true,
+    funcao: 'Desenvolvedor',
+    dataCadastro: '2023-08-01T09:00:00.000Z',
+    status: {
+      online: true,
+      verificado: true,
+      assinaturaAtiva: true,
+      ultimoAcesso: '2023-08-02T09:00:00.000Z',
+    },
+  },
+  {
     nome: 'Ana Pereira',
     email: 'ana.pereira@example.com',
     senha: 'minhaSenha2024',
