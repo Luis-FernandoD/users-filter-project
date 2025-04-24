@@ -7,18 +7,18 @@ import { IAdress } from '../interfaces/user/adress.interface';
 })
 export class AdressPipe implements PipeTransform {
 
-  transform(adress: IAdress): string {
+  transform(address: IAdress): string {
    const INVALID_ADRESS = 
-    !adress ||
-    !adress.rua ||
-    !adress.cidade ||
-    !adress.estado ||
-    adress.numero === null || adress.numero === undefined;
+    !address ||
+    !address.rua ||
+    !address.cidade ||
+    !address.estado ||
+    address.numero === null || address.numero === undefined;
 
     if(INVALID_ADRESS){
       return "Endereço indisponivel ou inválido"
     }
 
-    return `${adress.rua}, ${adress.numero}, ${adress.cidade}  - ${adress.estado}, ${adress.pais}`
+    return `${address.rua}, ${address.numero}, ${address.cidade}  - ${address.estado}, ${address.pais}`
   }
 }
