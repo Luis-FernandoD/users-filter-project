@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { IAdress } from '../interfaces/user/adress.interface';
 
 @Pipe({
   name: 'adress',
@@ -6,23 +7,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AdressPipe implements PipeTransform {
 
-  transform(value: any): string {
-    if (!value || typeof value !== 'object') {
-      return 'Endereço indisponível';
+  transform(adress: IAdress): string {
+   const INVALID_ADRESS = 
+    !adress ||
+    !adress.rua ||
+    !adress.cidade ||
+    !adress.estado ||
+    adress.numero === null || adress.numero === undefined;
+
+    if(INVALID_ADRESS){
+      return "Endereço indisponivel ou inválido"
     }
 
-    const { rua, numero, cidade, estado, pais } = value;
-
-    // Validação simples: verificar se tem pelo menos rua, cidade e estado
-    if (!rua || !cidade || !estado) {
-      return 'Endereço incompleto';
-    }
-
-    // Formatação com campos opcionais
-    const numeroParte = numero ? `, ${numero}` : '';
-    const cidadeEstado = `${cidade}/${estado}`;
-    const paisParte = pais ? `, ${pais}` : '';
-
-    return `${rua}${numeroParte} - ${cidadeEstado}${paisParte}`;
+    return `${adress.rua}, ${adress.numero}, ${adress.cidade}  - ${adress.estado}, ${adress.pais}`
   }
 }
