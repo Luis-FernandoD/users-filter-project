@@ -9,9 +9,11 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    border-bottom: 2px solid;
+    
 
     &__name{
-
+        
     }
 
     &__date__picker{
@@ -25,4 +27,23 @@
     &__button{
 
     }
+}
+
+::ng-deep .mdc-text-field--filled {
+    border-radius: 20px !important;
+}
+
+
+::ng-deep .mat-mdc-raised-button {
+    border-radius: 20px !important;
+}
+
+
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::before {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+::ng-deep .mat-date-range-input-inner {
+    border-radius: 20px;
 }

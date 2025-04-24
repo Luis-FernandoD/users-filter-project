@@ -7,3 +7,10 @@
         cursor: pointer;
     }
 }
+::ng-deep table {
+    border: 10px; 
+    border-radius: 20px;
+    border-collapse: separate !important; 
+    border-spacing: 0; 
+    overflow: hidden; 
+}
