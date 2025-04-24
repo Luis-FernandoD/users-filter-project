@@ -7,6 +7,7 @@
         cursor: pointer;
     }
 }
+
 ::ng-deep table {
     border: 10px; 
     border-radius: 20px;
@@ -14,3 +15,16 @@
     border-spacing: 0; 
     overflow: hidden; 
 }
+
+
+.users-list ::ng-deep .mat-mdc-row {
+    transition: background-color 0.2s ease;
+  }
+  
+  .users-list ::ng-deep .mat-mdc-row:hover {
+    background-color: rgba(0, 0, 0, 0.04); 
+  }
+  
+  .users-list ::ng-deep .mat-mdc-row.selected {
+    background-color: rgba(63, 81, 181, 0.1); 
+  }
