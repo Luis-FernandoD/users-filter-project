@@ -7,7 +7,8 @@ import { StatusPipe } from './status.pipe';
     declarations: [
     PhonePipe,
     AdressPipe,
-    StatusPipe
+    StatusPipe,
+    
   ],
     exports: [
         PhonePipe,
