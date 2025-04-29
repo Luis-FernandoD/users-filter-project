@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { IFilterOptions } from '../../interfaces/user/filter-options.interface';
+import { I } from '@angular/cdk/keycodes';
 interface Food {
   value: string;
   viewValue: string;
@@ -22,7 +23,9 @@ export class FilterComponent {
     {description: 'Inativo', value: false}
   ]
 
+  @Output('onFilter') onFilterEmitt = new EventEmitter<IFilterOptions>();
+
   onFilter(){
-    console.log(this.filterOptions)
+    this.onFilterEmitt.emit(this.filterOptions);
   }
 }
